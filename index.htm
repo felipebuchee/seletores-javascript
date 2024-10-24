@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Atividades de Javascript</title>
+
+    <link rel="shortcut icon" type="imagex/png" href="js.ico">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Atividades de Javascript</h1>
+
+    <div class="atividades">
+
+
+        <h2>1) O JavaScript pode ser usado tanto para aplicações Frontend quanto Backend. Faça uma
+            breve pesquisa sobre qual o objetivo de se usar javascript em aplicações Frontend.
+        </h2>
+        <p>R: No início, as páginas da Web eram estáticas e exibiam apenas informações fixas, como páginas de um livro.
+            Com o surgimento do JavaScript, os sites se tornaram mais dinâmicos, permitindo que os navegadores reagissem
+            às interações dos usuários e alterassem o conteúdo exibido. Com o tempo, JavaScript evoluiu, levando ao
+            desenvolvimento de bibliotecas, frameworks e boas práticas. Atualmente, a linguagem é usada tanto no lado do
+            cliente quanto no lado do servidor, ampliando seu uso para várias aplicações.</p>
+
+        <h2>2) Acesse o site globo.com. Abra a ferramenta devtools e na guia console digite o comando
+            document.querySelector('.post__title').textContent = 'seu texto aqui'
+        </h2>
+
+        <h3>a) Mude o conteúdo de ‘seu texto aqui para uma notícia que você gostaria que acontecesse’</h3>
+        <h3>b)Tire um screen shot e cole aqui como resposta:</h3>
+
+        <img src="g1.png" alt="">
+
+        <h2>3) Faça um programa que modifique um elemento h1 presente em um documento html. Por
+            meio do Javascript, devem ser alterados sua cor, tamanho e texto;
+        </h2>
+        <button id="botaoEx3">Esse H1 aqui embaixo vai mudar</button>
+
+        <h1 class="ex3" id="textoEx3">Eu irei mudar!</h1>
+
+        <h2>4)Crie um botão e um contador. Adicione um listener ao botão que
+            incremente o contador a cada clique.
+        </h2>
+        <button class="contador" id="botaoContador">Aposta quanto que vou contar todos seus cliques?</button>
+        <p id="textoContador"></p>
+
+        <h2>5) Crie um botão que, ao ser clicado, crie e insira um novo item de lista em uma lista
+            existente na página. Use o método document.createElement para criar um novo elemento e
+            método appendChild para inserir o elemento recém criado na lista.
+        </h2>
+        <ul> MAIORES MEDOS DE UM HOMEM MODERNO
+            <li>mulher</li>
+            <li>beijar na boca</li>
+            <li>beber agua</li>
+        </ul>
+
+        <h2>6) Crie um gerador de nome de aventuras. Você deve gerar um nome baseado nas seguintes
+            opções
+            <br>
+            const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+            <br>
+            const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+            <br>
+            const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+            <br>
+            const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+            <br>
+            Seu objetivo é criar um botão que quando clicado gera um nome de aventura aleatoriamente.
+        </h2>
+        <p>R:</p>
+
+        <h2>7) Gravity Falls: Um Verão de Mistérios, é uma série animada
+            americana criada por Alex Hirsch, produzida pela Disney de 15 de junho
+            de 2012 a 15 de fevereiro de 2016. A série segue as aventuras de Dipper
+            Pines e sua irmã gêmea Mabel, que vão passar suas férias de verão com
+            seu tio-avô Stanford Pines em Gravity Falls, uma cidade misteriosa cheia
+            de forças paranormais e criaturas sobrenaturais.
+        </h2>
+
+        <h3>a) Escolha um personagem de animação e insira em uma página HTML;</h3>
+        <h3>b)O personagem escolhido deve responder com frases aos eventos de mouseenter,
+            mouseleave, mousemove e click
+        </h3>
+
+        <h2>8)Faça um programa que identifique o texto digitado por um usuário em um campo do tipo
+            input.
+        </h2>
+
+        <h3>
+            a) A medida que o usuário digitar, você deve verificar se o texto contém a quantidade de
+            letras na palavra. Caso seja maior que 3, o conteúdo deve ser verificado e as seguintes
+            frases exibidas:
+            <br>
+            I. “Chocolate”. Nesse caso você deve exibir no documento a frase: “Eu amo sorvete de
+            chocolate!”
+            <br>
+            II. “Flocos”, você deve apresentar a frase “Ahh, mas chocolate é o meu favorito...”
+            <br>
+            III. Caso contrário você deve apresentar a frase “Ahh, eu esperava um sabor de
+            sorvete...”
+        </h3>
+
+        <h2>9)Faça com que o exercício anterior tenha um modo escuro (exemplo:
+            <a href="https://portal.unila.edu.br/">Site da Unila</a>)
+        </h2>
+
+        <h2>10) Faça um programa que valide um formulário de cadastro com os campos nome, e-mail,
+            senha e confirmação de senha. As regras de validação são:            
+        </h2>
+
+        <h3>a) O campo de nome deve possuir ao menos 3 caracteres;</h3>
+        <h3>b) O campo e-mail deve ser validado com a seguinte expressão reguslar:
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            Para verificar se uma string atende a expressão regular, use o método test( ):
+            emailRegex.test(“meu_email@ifpr.edu.br”)
+            Se o e-mail informado passar no teste, então a função retorna true, caso contrário, retorna
+            false</h3>
+        <h3>c) O campo de senha não pode ter menos que 8 caracteres e deve conter pelo menos uma letra
+            maiúscula, um número e um caractere especial. Essa validação deve ser realizada
+            usando-se a seguinte expressão regular:
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;</h3>
+        <h3>d) Os valores para os campos senha e confirmação de senha devem ser idênticos;</h3>
+        <h3>e) Você deve criar um mecanismo para revelar a senha digitada.</h3>
+    </div>
+
+    <script>
+        //ex3
+        const botao = document.getElementById('botaoEx3')
+        const textoEx3 = document.getElementById('textoEx3')
+
+        botao.addEventListener('click', function () {
+            console.log('clicou')
+            textoEx3.innerText = "Eu não falei que ia mudar?"
+            textoEx3.classList.toggle("ativo"); //achei esse comando em um forum (stackoverflow)
+
+            if (!textoEx3.classList.contains("ativo")) {
+                textoEx3.innerText = "Eu irei mudar!"
+            }
+        })
+
+
+        //ex4
+        let numeroCliques = 0
+        const botaoContador = document.getElementById('botaoContador')
+        const textoContador = document.getElementById('textoContador')
+
+        botaoContador.addEventListener('click', function () {
+            console.log('clicou')
+            textoContador.innerText = "Você me clicou " + numeroCliques + " vezes!! HAHAHAHA EU FALEI!"
+            numeroCliques++
+        })
+
+    </script>
+
+</body>
+
+</html>

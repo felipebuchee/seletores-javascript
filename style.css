@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Poppins;
+    background-color: #00AFC1;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+
+h2{
+    padding-bottom: 25px;
+}
+
+h3{
+    padding-bottom: 15px;
+}
+
+p{
+    padding-bottom: 50px;
+}
+
+img{
+    padding-bottom: 50px;
+    border-radius: 50px;
+}
+
+.ex3{
+    text-align: center;
+    padding-top: 30px;
+    color: #10316B;
+    padding-bottom: 50px;
+    transition: 0.5s;
+}
+
+.ex3.ativo{
+    color: #00AFC1;
+    font-size: 75px;
+    transition: 0.5s;
+}
+
+button{
+    padding: 30px;
+    padding-bottom: 70px;
+    border-radius: 5px;
+    width: 70vw;
+    border: none;
+    background-color: #ffc800;
+    transition: 0.5s;
+    color: white;
+    font-weight: 600;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ffa200;
+    transition: 0.5s;
+}
+
+.contador{
+    font-size: 36px;
+    background-color: #ff4800;
+    margin-bottom: 50px;
+}
+
+.contador:hover{
+    background-color: #ff0000;
+}
+
+.atividades {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 25px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
+    background-color: white;
+    margin: 30px 150px 30px 150px;
+}
