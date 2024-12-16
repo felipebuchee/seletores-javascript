@@ -36,7 +36,7 @@
         <img src="g1.png" alt="">
 
         <h2>3) Faça um programa que modifique um elemento h1 presente em um documento html. Por
-            meio do Javascript, devem ser alterados sua cor, tamanho e texto;
+            meio do Javascript, devem ser alterados sua cor, tamanho e texto
         </h2>
         <button id="botaoEx3">Esse H1 aqui embaixo vai mudar</button>
 
@@ -52,26 +52,28 @@
             existente na página. Use o método document.createElement para criar um novo elemento e
             método appendChild para inserir o elemento recém criado na lista.
         </h2>
-        <ul> MAIORES MEDOS DE UM HOMEM MODERNO
-            <li>mulher</li>
-            <li>beijar na boca</li>
-            <li>beber agua</li>
+        <ul id="medos"> MAIORES MEDOS DE UM HOMEM MODERNO
+            <li>Mulher</li>
+            <li>Beijar na boca</li>
+            <li>Sair de casa</li>
         </ul>
+        <button id="adicionar">Adicionar medo</button>
 
         <h2>6) Crie um gerador de nome de aventuras. Você deve gerar um nome baseado nas seguintes
             opções
             <br>
-            const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"];
+            const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"]
             <br>
-            const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+            const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"]
             <br>
-            const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+            const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"]
             <br>
-            const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+            const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"]
             <br>
             Seu objetivo é criar um botão que quando clicado gera um nome de aventura aleatoriamente.
         </h2>
-        <p>R:</p>
+        <p id="aventura">Clique no botão para gerar um nome!</p>
+        <button id="gerar">Gerar Nome</button>
 
         <h2>7) Gravity Falls: Um Verão de Mistérios, é uma série animada
             americana criada por Alex Hirsch, produzida pela Disney de 15 de junho
@@ -81,10 +83,14 @@
             de forças paranormais e criaturas sobrenaturais.
         </h2>
 
-        <h3>a) Escolha um personagem de animação e insira em uma página HTML;</h3>
+        <h3>a) Escolha um personagem de animação e insira em uma página HTML</h3>
         <h3>b)O personagem escolhido deve responder com frases aos eventos de mouseenter,
             mouseleave, mousemove e click
         </h3>
+
+        <img id="stan" src="stan.png" alt="Stanford Pines">
+
+        <p id="mensagem">Passe o mouse sobre o personagem para interagir.</p>
 
         <h2>8)Faça um programa que identifique o texto digitado por um usuário em um campo do tipo
             input.
@@ -104,17 +110,23 @@
             sorvete...”
         </h3>
 
+        <input type="text" id="sabor" placeholder="Digite aqui">
+        <p id="resposta"></p>
+
         <h2>9)Faça com que o exercício anterior tenha um modo escuro (exemplo:
             <a href="https://portal.unila.edu.br/">Site da Unila</a>)
         </h2>
 
+        <button id="modo">Alternar para Modo Escuro</button>
+
+
         <h2>10) Faça um programa que valide um formulário de cadastro com os campos nome, e-mail,
-            senha e confirmação de senha. As regras de validação são:            
+            senha e confirmação de senha. As regras de validação são:
         </h2>
 
-        <h3>a) O campo de nome deve possuir ao menos 3 caracteres;</h3>
+        <h3>a) O campo de nome deve possuir ao menos 3 caracteres</h3>
         <h3>b) O campo e-mail deve ser validado com a seguinte expressão reguslar:
-            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
             Para verificar se uma string atende a expressão regular, use o método test( ):
             emailRegex.test(“meu_email@ifpr.edu.br”)
             Se o e-mail informado passar no teste, então a função retorna true, caso contrário, retorna
@@ -122,9 +134,14 @@
         <h3>c) O campo de senha não pode ter menos que 8 caracteres e deve conter pelo menos uma letra
             maiúscula, um número e um caractere especial. Essa validação deve ser realizada
             usando-se a seguinte expressão regular:
-            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;</h3>
-        <h3>d) Os valores para os campos senha e confirmação de senha devem ser idênticos;</h3>
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/</h3>
+        <h3>d) Os valores para os campos senha e confirmação de senha devem ser idênticos</h3>
         <h3>e) Você deve criar um mecanismo para revelar a senha digitada.</h3>
+
+        <a href="formulario.htm"><button class="botao-envio">Ir para o exercicio</button></a>
+        </form>
+
+
     </div>
 
     <script>
@@ -135,7 +152,7 @@
         botao.addEventListener('click', function () {
             console.log('clicou')
             textoEx3.innerText = "Eu não falei que ia mudar?"
-            textoEx3.classList.toggle("ativo"); //achei esse comando em um forum (stackoverflow)
+            textoEx3.classList.toggle("ativo") //achei esse comando em um forum (stackoverflow)
 
             if (!textoEx3.classList.contains("ativo")) {
                 textoEx3.innerText = "Eu irei mudar!"
@@ -153,6 +170,78 @@
             textoContador.innerText = "Você me clicou " + numeroCliques + " vezes!! HAHAHAHA EU FALEI!"
             numeroCliques++
         })
+
+        //ex5
+        const lista = document.getElementById('medos')
+        const botaoEx5 = document.getElementById('adicionar')
+
+        botaoEx5.addEventListener('click', () => {
+            const novoItem = document.createElement('li')
+            novoItem.textContent = 'Tomar água'
+            lista.appendChild(novoItem)
+        })
+
+        //ex6
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama"]
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"]
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"]
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"]
+
+        document.getElementById('gerar').addEventListener('click', () => {
+            const titulo = titles[Math.floor(Math.random() * titles.length)]
+            const nome = names[Math.floor(Math.random() * names.length)]
+            const classe = classes[Math.floor(Math.random() * classes.length)]
+            const local = locations[Math.floor(Math.random() * locations.length)]
+
+            document.getElementById('aventura').textContent = `${titulo} ${nome}, o ${classe} de ${local}`
+        })
+
+        //ex7
+        const personagem = document.getElementById('stan')
+        const mensagem = document.getElementById('mensagem')
+
+        personagem.addEventListener('mouseenter', () => {
+            mensagem.textContent = 'Olá, eu sou Stan!'
+        })
+
+        personagem.addEventListener('mouseleave', () => {
+            mensagem.textContent = 'Só não vá para outra dimensão, é perigoso. Experiência própria.'
+        })
+
+        personagem.addEventListener('mousemove', (e) => {
+            mensagem.textContent = `Porque você está mexendo comigo?`
+        })
+
+        personagem.addEventListener('click', () => {
+            mensagem.textContent = 'AAAAAAAAAAAAAH!!! Pensei que fosse o bill!'
+        })
+
+        //ex8
+        const input = document.getElementById('sabor')
+        const resposta = document.getElementById('resposta')
+
+        input.addEventListener('input', () => {
+            const texto = input.value.toLowerCase()
+
+            if (texto.includes("chocolate")) {
+                resposta.textContent = "Eu amo sorvete de chocolate!"
+            } else if (texto.includes("flocos")) {
+                resposta.textContent = "Ahh, mas chocolate é o meu favorito..."
+            } else if (texto.includes("pistache")) {
+                resposta.textContent = "Resposta secreta haha! Esse é o preferido do programador!"
+            } else if (texto.length > 3) {
+                resposta.textContent = "Ahh, eu esperava um sabor de sorvete..."
+            } else {
+                resposta.textContent = ""
+            }
+        })
+
+        //ex9
+        const botaoModo = document.getElementById('modo');
+
+        botaoModo.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
 
     </script>
 

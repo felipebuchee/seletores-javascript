@@ -8,6 +8,10 @@ body{
     background-color: #00AFC1;
 }
 
+.dark-mode {
+    background-color: #230057;
+}
+
 h1 {
     text-align: center;
     padding-top: 30px;
@@ -59,6 +63,29 @@ button{
     cursor: pointer;
 }
 
+.botao-envio{
+    background-color: #44cb00;
+    font-size: small;
+    width: 50vw;
+    height: 30px;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.botao-envio:hover{
+    background-color: #00a651;
+    transition: 0.5s;
+}
+
+.grupo{
+    padding: 10px
+}
+
+.input.invalida{
+    border: 2px solid red;
+    color: red;
+}
+
 button:hover{
     background-color: #ffa200;
     transition: 0.5s;
@@ -83,4 +110,25 @@ button:hover{
     padding: 30px;
     background-color: white;
     margin: 30px 150px 30px 150px;
+}
+
+.erro{
+    color: red;
+    display: none;
+}
+
+.grupo{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    outline: none;
+}
+
+input.invalido {
+    border: solid 2px red;
 }

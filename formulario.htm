@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Atividades de Javascript</title>
+
+    <link rel="shortcut icon" type="imagex/png" href="js.ico">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Atividades de Javascript (Apenas a 10)</h1>
+
+    <div class="atividades">
+
+        <h2>10) Faça um programa que valide um formulário de cadastro com os campos nome, e-mail,
+            senha e confirmação de senha. As regras de validação são:
+        </h2>
+
+        <h3>a) O campo de nome deve possuir ao menos 3 caracteres;</h3>
+        <h3>b) O campo e-mail deve ser validado com a seguinte expressão reguslar:
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            Para verificar se uma string atende a expressão regular, use o método test( ):
+            emailRegex.test(“meu_email@ifpr.edu.br”)
+            Se o e-mail informado passar no teste, então a função retorna true, caso contrário, retorna
+            false</h3>
+        <h3>c) O campo de senha não pode ter menos que 8 caracteres e deve conter pelo menos uma letra
+            maiúscula, um número e um caractere especial. Essa validação deve ser realizada
+            usando-se a seguinte expressão regular:
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;</h3>
+        <h3>d) Os valores para os campos senha e confirmação de senha devem ser idênticos;</h3>
+        <h3>e) Você deve criar um mecanismo para revelar a senha digitada.</h3>
+        <br>
+        <br>
+
+        <form action="">
+
+            <div class="grupo">
+
+                <input type="text" placeholder="Informe seu nome">
+                <span class="erro">O nome deve ter pelo menos 3 caracteres</span>
+
+            </div>
+
+            <div class="grupo">
+
+                <input type="text" placeholder="Informe o seu e-mail">
+                <span class="erro"> O e-mail precisar ser válido!</span>
+
+            </div>
+
+            <div class="grupo">
+                <input type="password" placeholder="Informe a sua senha">
+                <span class="erro">A senha precisa ter 8 caracteres</span>
+            </div>
+
+            <div class="grupo">
+
+                <a class="alterarSenha"><i class="bi bi-eye-fill"></i></a>
+            </div>
+
+
+            <div class="grupo">
+
+                <input type="password" placeholder="Confirme a senha">
+                <span class="erro">A confirmação não responde a senha</span>
+
+            </div>
+
+            <div class="grupo">
+
+                <input type="submit">
+
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <script>
+        //ex10
+
+        const inputs = document.querySelectorAll ('input');
+        const erros = document.querySelectorAll ('.erro');
+
+        function mostrarErro (inputs, erros) {
+            erros.style.display = 'block'
+            inputs.classList.add('invalido')     
+        }
+
+        function removerErro(inputs, erros) {
+            erros.style.display = 'none'
+            inputs.classList.remove('invalido')
+        }
+
+        function validaNome () {
+            if (inputs[0].value.length <= 3) {
+                console.log("digitou!")
+                mostrarErro(inputs[0], erros[0])
+            }
+
+            else {
+                removerErro(inputs[0], erros[0])
+            }
+        }
+
+        function validaEmail () {
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+            if (!emailRegex.test(inputs[1].value)) {
+                mostrarErro(inputs[1], erros[1])
+            }
+            else{
+                removerErro(inputs[1], erros[1])
+            }
+        }
+
+        function validaSenha () {
+
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+            if (!senhaRegex.test(inputs[2].value)) {
+                mostrarErro(inputs[2], erros[2])
+            }
+            else{
+                removerErro(inputs[2], erros[2]) 
+            }
+        }
+
+        function confirmaSenha () {
+            if (inputs[3].value != inputs[2].value) {
+                mostrarErro(inputs[3], erros[3])
+            }
+            else{
+                removerErro(inputs[3], erros[3]) 
+            }  
+        }
+
+        inputs[0].addEventListener('input' , validaNome)
+        inputs[1].addEventListener('input' , validaEmail)
+        inputs[2].addEventListener('input' , validaSenha)
+        inputs[3].addEventListener('input' , confirmaSenha)
+
+        document.querySelector('form').addEventListener('submit', function(evento) {
+
+            evento.preventDefault()
+
+            validaNome()
+            validaEmail()
+            validaSenha()
+            confirmaSenha()
+
+        })
+
+        document.querySelector('.alterarSenha').addEventListener('click', function() {
+
+            const tipoAtual = inputs[2].getAttribute('type');
+            const tipo = tipoAtual === 'password' ? 'text' : 'password';
+
+            inputs[2].setAttribute('type', tipo)
+        })
+    </script>
+
+</body>
+
+</html>
